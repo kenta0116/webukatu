@@ -70,7 +70,7 @@ function validMinLen($str, $key, $min = 6){
   }
 }
 //バリデーション関数（最大文字数チェック）
-function validMaxLen($str, $key, $max = 256){
+function validMaxLen($str, $key, $max = 255){
   if(mb_strlen($str) > $max){
     global $err_msg;
     $err_msg[$key] = MSG06;
@@ -86,7 +86,7 @@ function validHalf($str, $key){
 //DB接続関数
 function dbConnect(){
   //DBへの接続準備
-  $dsn = 'mysql:dbname=freemarket;host=localhost;charset=utf8';
+  $dsn = 'mysql:dbname=freemarket1;host=localhost;charset=utf8';
   $user = 'root';
   $password = 'root';
   $options = array(
